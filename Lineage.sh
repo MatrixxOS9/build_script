@@ -32,4 +32,4 @@ git clone https://github.com/MatrixxOS9/android_hardware_xiaomi.git --depth 1 -b
 # lunch
 lunch lineage_mojito-userdebug
 # Build the code
- mka bacon -jX
+mka bacon
