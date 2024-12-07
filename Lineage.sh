@@ -13,12 +13,12 @@ rm -rf hardware/xiaomi
 rm -rf vendor/xiaomi/mojito
 rm -rf vendor/xiaomi/sm6150-common
 # Initialize ROM manifest
-repo init -u https://github.com/Black-Iron-Project/manifest -b u14_QPR3 --git-lfs
+repo init -u https://github.com/alphadroid-project/manifest -b alpha-14 --git-lfs
 # repo sync
 /opt/crave/resync.sh
 # cloning DT
 # device tree
-git clone https://github.com/MatrixxOS9/device_xiaomi_mojito.git --depth 1 -b iron device/xiaomi/mojito
+git clone https://github.com/MatrixxOS9/device_xiaomi_mojito.git --depth 1 -b lineage device/xiaomi/mojito
 git clone https://github.com/MatrixxOS9/android_device_xiaomi_sm6150-common.git --depth 1 -b mojito-universe device/xiaomi/sm6150-common
 # kernel tree
 git clone https://github.com/MatrixxOS9/kernel_xiaomi_mojito.git --depth 1 -b inline-rom kernel/xiaomi/mojito
@@ -32,4 +32,4 @@ git clone https://github.com/MatrixxOS9/android_hardware_xiaomi.git --depth 1 -b
 # lunch
 lunch lineage_mojito-userdebug
 # Build the code
-mka bacon
+make bacon
