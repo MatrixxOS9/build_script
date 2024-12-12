@@ -30,4 +30,4 @@ git clone https://github.com/MatrixxOS9/android_hardware_xiaomi.git --depth 1 -b
 # set build environment
 . build/envsetup.sh
 # lunch
-brunch mojito userdeebug
+brunch mojito userdebug
