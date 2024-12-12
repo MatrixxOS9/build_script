@@ -13,13 +13,13 @@ rm -rf hardware/xiaomi
 rm -rf vendor/xiaomi/mojito
 rm -rf vendor/xiaomi/sm6150-common
 # Initialize ROM manifest
-repo init -u https://github.com/crdroidandroid/android.git -b 14.0 --git-lfs
+repo init -u https://github.com/TenX-OS/manifest.git -b fourteen --git-lfs
 # repo sync
 /opt/crave/resync.sh
 # cloning DT
 # device tree
-git clone https://github.com/MatrixxOS9/device_xiaomi_mojito.git --depth 1 -b crdroid device/xiaomi/mojito
-git clone https://github.com/MatrixxOS9/android_device_xiaomi_sm6150-common.git --depth 1 -b mojito-universe device/xiaomi/sm6150-common
+git clone https://github.com/MatrixxOS9/device_xiaomi_mojito.git --depth 1 -b tenx device/xiaomi/mojito
+git clone https://github.com/MatrixxOS9/android_device_xiaomi_sm6150-common.git --depth 1 -b tenx device/xiaomi/sm6150-common
 # kernel tree
 git clone https://github.com/MatrixxOS9/kernel_xiaomi_mojito.git --depth 1 -b inline-rom kernel/xiaomi/mojito
 # vendor tree
@@ -30,4 +30,4 @@ git clone https://github.com/MatrixxOS9/android_hardware_xiaomi.git --depth 1 -b
 # set build environment
 . build/envsetup.sh
 # lunch
-brunch mojito
+brunch mojito userdeebug
