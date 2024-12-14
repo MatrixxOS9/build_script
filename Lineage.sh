@@ -32,4 +32,4 @@ git clone https://gitlab.com/Sepidermn/android_vendor_xiaomi_mojito-leicacamera.
 # set build environment
 . build/envsetup.sh
 # lunch
-brunch mojito userdebug
+brunch mojito user
