@@ -21,12 +21,14 @@ repo init --depth=1 -u https://github.com/ProjectSakura/android.git -b 14 --git-
 git clone https://github.com/MatrixxOS9/device_xiaomi_mojito.git --depth 1 -b sakura device/xiaomi/mojito
 git clone https://github.com/MatrixxOS9/android_device_xiaomi_sm6150-common.git --depth 1 -b mojito-universe device/xiaomi/sm6150-common
 # kernel tree
-git clone https://github.com/MatrixxOS9/kernel_xiaomi_mojito.git --depth 1 -b inline-rom kernel/xiaomi/mojito
+git clone https://github.com/MatrixxOS9/kernel_xiaomi_mojito.git --depth 1 -b sakura kernel/xiaomi/mojito
 # vendor tree
 git clone https://gitlab.com/Sepidermn/android_vendor_xiaomi_mojito.git --depth 1 -b 14 vendor/xiaomi/mojito
 git clone https://gitlab.com/Sepidermn/android_vendor_xiaomi_sm6150-common.git --depth 1 -b 14 vendor/xiaomi/sm6150-common
 # hardware tree
 git clone https://github.com/MatrixxOS9/android_hardware_xiaomi.git --depth 1 -b mojito hardware/xiaomi
+# add leica
+git clone https://gitlab.com/Sepidermn/android_vendor_xiaomi_mojito-leicacamera.git -b main vendor/xiaomi/mojito-leicacamera
 # set build environment
 . build/envsetup.sh
 # lunch
