@@ -17,8 +17,8 @@ repo init --depth=1 -u https://github.com/ProjectSakura/android.git -b 14 --git-
 # repo sync
 /opt/crave/resync.sh
 # cloning DT
-# remove jemalloc
-rm -rf external/jemalloc/new
+# remove av
+rm -rf frameworks/av
 # device tree
 git clone https://github.com/MatrixxOS9/device_xiaomi_mojito.git --depth 1 -b sakura device/xiaomi/mojito
 git clone https://github.com/MatrixxOS9/android_device_xiaomi_sm6150-common.git --depth 1 -b mojito-universe device/xiaomi/sm6150-common
@@ -29,6 +29,8 @@ git clone https://gitlab.com/Sepidermn/android_vendor_xiaomi_mojito.git --depth 
 git clone https://gitlab.com/Sepidermn/android_vendor_xiaomi_sm6150-common.git --depth 1 -b 14 vendor/xiaomi/sm6150-common
 # hardware tree
 git clone https://github.com/MatrixxOS9/android_hardware_xiaomi.git --depth 1 -b mojito hardware/xiaomi
+# add modification av
+git clone https://github.com/MatrixxOS9/android_frameworks_av.git --depth 1 -b lineage-21.0 frameworks/av
 # set build environment
 . build/envsetup.sh
 # lunch
