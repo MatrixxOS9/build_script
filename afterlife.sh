@@ -21,7 +21,7 @@ repo init --depth=1 -u https://github.com/AfterlifeOS/android_manifest.git -b 14
 rm -rf frameworks/base
 # device tree
 git clone https://github.com/MatrixxOS9/device_xiaomi_mojito.git --depth 1 -b afterlife device/xiaomi/mojito
-git clone https://github.com/MatrixxOS9/android_device_xiaomi_sm6150-common.git --depth 1 -b mojito-universe device/xiaomi/sm6150-common
+git clone https://github.com/MatrixxOS9/android_device_xiaomi_sm6150-common.git --depth 1 -b afterlife device/xiaomi/sm6150-common
 # kernel tree
 git clone https://github.com/Kou-Yeager/kernel_xiaomi_mojito.git --depth 1 -b BORE+UCLAMP kernel/xiaomi/mojito
 # vendor tree
@@ -31,8 +31,10 @@ git clone https://gitlab.com/Sepidermn/android_vendor_xiaomi_sm6150-common.git -
 git clone https://github.com/MatrixxOS9/android_hardware_xiaomi.git --depth 1 -b mojito hardware/xiaomi
 # add modify
 git clone https://github.com/wulan17/frameworks_base.git --depth 1 -b 14 frameworks/base
+# Export
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 # set build environment
 . build/envsetup.sh
 # lunch
-goafterlife mojito
+goafterlife mojito userdebug
 
