@@ -19,6 +19,10 @@ repo init --depth=1 -u https://github.com/AfterlifeOS/android_manifest.git -b 14
 # cloning DT
 # remove frameworks/base
 rm -rf frameworks/base
+# remove packages/apps/AfterHome
+rm -rf packages/apps/AfterHome
+# remove packages/apps/Settings
+rm -rf packages/apps/Settings
 # device tree
 git clone https://github.com/MatrixxOS9/device_xiaomi_mojito.git --depth 1 -b afterlife device/xiaomi/mojito
 git clone https://github.com/MatrixxOS9/android_device_xiaomi_sm6150-common.git --depth 1 -b afterlife device/xiaomi/sm6150-common
@@ -29,8 +33,12 @@ git clone https://gitlab.com/Sepidermn/android_vendor_xiaomi_mojito.git --depth 
 git clone https://gitlab.com/Sepidermn/android_vendor_xiaomi_sm6150-common.git --depth 1 -b 14 vendor/xiaomi/sm6150-common
 # hardware tree
 git clone https://github.com/MatrixxOS9/android_hardware_xiaomi.git --depth 1 -b mojito hardware/xiaomi
-# add modify
+# add frameworks/base
 git clone https://github.com/wulan17/frameworks_base.git --depth 1 -b 14 frameworks/base
+# add packages/apps/AfterHome
+git clone https://github.com/wulan17/packages_apps_AfterHome.git --depth 1 -b 14 packages/apps/AfterHome
+# add packages/apps/Settings
+git clone https://github.com/wulan17/packages_apps_Settings.git --depth 1 -b 14 packages/apps/Settings
 # Export
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 # set build environment
