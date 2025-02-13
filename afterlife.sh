@@ -17,8 +17,6 @@ repo init --depth=1 -u https://github.com/AfterlifeOS/android_manifest.git -b 14
 # repo sync
 /opt/crave/resync.sh
 # cloning DT
-# remove av
-rm -rf frameworks/av
 # device tree
 git clone https://github.com/MatrixxOS9/device_xiaomi_mojito.git --depth 1 -b afterlife device/xiaomi/mojito
 git clone https://github.com/MatrixxOS9/android_device_xiaomi_sm6150-common.git --depth 1 -b mojito-universe device/xiaomi/sm6150-common
